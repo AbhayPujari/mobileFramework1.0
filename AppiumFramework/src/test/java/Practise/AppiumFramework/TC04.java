@@ -20,9 +20,7 @@ public class TC04 extends Capability{
 		
 		String appactivity = null;
 		String apppackage = null;
-		//String appactivity = null;
-		//	String apppackage = null;
-		// TODO Auto-generated method stub
+		
 		AndroidDriver<AndroidElement> driver = Hybridcapability(appactivity,apppackage);
 		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    /* driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Hello");

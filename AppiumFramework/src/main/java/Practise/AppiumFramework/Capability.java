@@ -18,7 +18,8 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class Capability {
 
 	public static  AndroidDriver<AndroidElement> Hybridcapability(String appactivity,String apppackage) throws IOException {
-		FileInputStream fis = new FileInputStream("E://MOBILE//AppiumFramework//src//main//java//global.properties");
+		
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"src//main//java//global.properties");
 		Properties prop = new Properties();
 		prop.load(fis);
 		DesiredCapabilities ca = new DesiredCapabilities();
