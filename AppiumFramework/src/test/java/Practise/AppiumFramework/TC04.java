@@ -1,6 +1,7 @@
 package Practise.AppiumFramework;
 
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Properties;
@@ -18,11 +19,10 @@ public class TC04 extends Capability{
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		
-		String appactivity = null;
-		String apppackage = null;
+		AndroidDriver<AndroidElement> driver = Hybridcapability(appactivity, apppackage,deviceName);
 		
-		AndroidDriver<AndroidElement> driver = Hybridcapability(appactivity,apppackage);
 		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 System.out.println();
 	    /* driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Hello");
 	     driver.hideKeyboard();
 	     driver.findElement(By.xpath("//*[@text='Female']")).click();
