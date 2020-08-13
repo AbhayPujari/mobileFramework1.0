@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -17,7 +18,10 @@ public class TC04 extends Capability{
 
 	
 
-	public static void main(String[] args) throws InterruptedException, IOException {
+	//public static void main(String[] args) throws InterruptedException, IOException 
+	@Test
+	public void OpenApp() throws IOException
+	{
 		
 		AndroidDriver<AndroidElement> driver = Hybridcapability(appactivity, apppackage,deviceName);
 		
